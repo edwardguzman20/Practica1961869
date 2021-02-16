@@ -1,0 +1,51 @@
+h1{
+  text-align: center;
+}
+h3{  
+  text-align: center;
+  padding: 15px 0;
+}
+/* Style the tabla */
+.tabla {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }  
+  /* Style the buttons that are used to open the tabla content */
+  .tabla button {
+    background-color: inherit;
+    color: gray;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+  /* Create an active/current tablalink class */
+  .tabla button.active {
+    background-color: #ccc;
+    display: block;
+  }
+  
+  /* Style the tabla content */
+  .tablacontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+  }
+  .dato{
+    background-color: red;
+  }
+  img{ 
+    padding: 10px;
+    width: 130px;
+    height: 190px;
+  }
+  .card{
+    float: left;
+    margin: 10px;
+    background-color: #EAEBEA;
+  }
+  
