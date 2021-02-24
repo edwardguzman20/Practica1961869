@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: rgb(0, 0, 0);
+}
+body{
+    background: linear-gradient(rgb(53, 90, 190),rgb(80, 215, 248));
+}
+header{
+    z-index: 10;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.87);
+    width: 92%;
+    padding: 0 4%;
+    height: 13vh;
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.37);
+}
+
+header .indice{
+    float: left;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav{
+    float: left;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+}
+header nav h2{
+    margin-left:30px;
+    transition: .1s;
+}
+header nav h2:hover{
+    color: rgb(53, 90, 190);
+    transition: .1s;
+}
+
+header .acciones{
+    width: calc(30% -90px);
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header .acciones .barrabusqueda{
+    outline: none;
+    height: 37%;
+    width: 40%;
+    text-align: center;
+    border-radius: 20px;
+    background: transparent;
+/*     box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.116); */
+    border: 1px solid rgba(0, 0, 0, 0.74);
+}
+header .acciones .barrabusqueda:focus{
+    border: 1px solid rgb(53, 90, 190);
+}
+header .acciones .botones{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .acciones .botones button{
+    padding: 5% 20px;
+    background: none;
+    border: none;
+    font-size: medium;
+    font-weight: bolder;
+    transition: .3s;
+
+
+}
+header .acciones .botones button:hover{
+    transform: scale(1.05);
+    transition: .1s;
+}
+header .acciones .botones .btn-ingresar:hover{
+    color: rgb(53, 90, 190);
+}
+header .acciones .botones .btn-registarse{
+    font-weight: bolder;
+    background: rgb(53, 90, 190);
+    color: white;
+    border-radius: 20px;
+
+}
+.contenido{
+    /* background: linear-gradient(rgb(53, 90, 190),rgb(80, 215, 248)); */
+    display: flex;
+    padding: 13vh 5% 0 5%;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.contenido .carta{
+    padding: 20px;
+    flex: 0 1 200px;
+}
+.contenido .carta img{
+    width: 100%;
+    transition: .3s;
+}
+.contenido .carta img:hover{
+    /* transform: scale(1.08); */
+    /* transform: rotatez(10deg);*/
+    /* transition: .3s; */
+    animation: sacudida .9s infinite;
+}
+.contenido .carta .texto{
+    width: 100%;
+}
+.contenido .carta .texto p{
+    color: rgb(255, 255, 255);
+}
+.contenido .carta .texto p:nth-child(2){
+    color: rgb(0, 0, 0);
+}
+.contenido .carta .texto .titulo{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.contenido .carta .texto .descripcion{
+    font-size: 1.04rem;
+    padding: 0;
+    text-align: center;
+}
+@keyframes rebote{
+    50%{transform: rotatez(20deg);}
+    100% {transform: rotatez(10deg);}
+
+}
+@keyframes sacudida{
+    0%{transform: translatex(-10px);}
+    50%{transform: translateX(10px);}
+    100% {transform: translateX(-10px);}
+
+}
+@media(max-width:1100px){
+    header .acciones .barrabusqueda{
+        display: none;
+    }
+}
+@media(max-width:1100px){
+    .contenido .carta{
+        flex: 200px;
+    }
+}
+@media(max-width:400px){
+    header nav h2 {
+        display: none;
+    }
+}
